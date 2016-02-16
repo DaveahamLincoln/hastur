@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Global Channels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @global_channels.each do |global_channel| %>
+      <tr>
+        <td><%= global_channel.message %></td>
+        <td><%= link_to 'Show', global_channel %></td>
+        <td><%= link_to 'Edit', edit_global_channel_path(global_channel) %></td>
+        <td><%= link_to 'Destroy', global_channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Global channel', new_global_channel_path %>

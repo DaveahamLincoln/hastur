@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>L weight:</strong>
+  <%= @node.l_weight %>
+</p>
+
+<p>
+  <strong>G weight:</strong>
+  <%= @node.g_weight %>
+</p>
+
+<p>
+  <strong>U weight:</strong>
+  <%= @node.u_weight %>
+</p>
+
+<p>
+  <strong>Queue:</strong>
+  <%= @node.queue %>
+</p>
+
+<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %>

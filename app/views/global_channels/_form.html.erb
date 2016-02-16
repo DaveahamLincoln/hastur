@@ -1,0 +1,21 @@
+<%= form_for(@global_channel) do |f| %>
+  <% if @global_channel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@global_channel.errors.count, "error") %> prohibited this global_channel from being saved:</h2>
+
+      <ul>
+      <% @global_channel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Universal Channels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @universal_channels.each do |universal_channel| %>
+      <tr>
+        <td><%= universal_channel.message %></td>
+        <td><%= link_to 'Show', universal_channel %></td>
+        <td><%= link_to 'Edit', edit_universal_channel_path(universal_channel) %></td>
+        <td><%= link_to 'Destroy', universal_channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Universal channel', new_universal_channel_path %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Local Channels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @local_channels.each do |local_channel| %>
+      <tr>
+        <td><%= local_channel.message %></td>
+        <td><%= link_to 'Show', local_channel %></td>
+        <td><%= link_to 'Edit', edit_local_channel_path(local_channel) %></td>
+        <td><%= link_to 'Destroy', local_channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Local channel', new_local_channel_path %>

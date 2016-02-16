@@ -1,0 +1,2 @@
+module UniversalChannelsHelper
+end

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @local_channel.message %>
+</p>
+
+<%= link_to 'Edit', edit_local_channel_path(@local_channel) %> |
+<%= link_to 'Back', local_channels_path %>

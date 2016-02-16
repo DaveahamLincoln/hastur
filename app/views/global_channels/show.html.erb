@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @global_channel.message %>
+</p>
+
+<%= link_to 'Edit', edit_global_channel_path(@global_channel) %> |
+<%= link_to 'Back', global_channels_path %>
